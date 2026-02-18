@@ -100,7 +100,7 @@ class _CalculatorGamePageState extends State<CalculatorGamePage> {
       }
 
       if (_detectDivisionByZero(expr)) {
-        throw const UnsupportedError('División por cero');
+        throw UnsupportedError('División por cero');
       }
 
       final double result = ExpressionEvaluator.evaluate(expr);
@@ -483,7 +483,7 @@ class ExpressionEvaluator {
           stack.add(a * b);
         case '/':
           if (b == 0) {
-            throw const UnsupportedError('División por cero');
+            throw UnsupportedError('División por cero');
           }
           stack.add(a / b);
         case '^':
